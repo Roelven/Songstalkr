@@ -1,46 +1,60 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 <head>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
   <meta charset=utf-8 />
 
   <title>Friendslistenr</title>
 
+  <link rel="stylesheet" href="css/styles.css" type="text/css" media="all" /> 
+
 </head>
 
 <body>
+  <div class="container">
+    <h1>Songstalkr</h1>
+    <table>
+      <tr class="searchbar">
+        <td>
+        </td>
+        <td>
+          search
+        </td>
+      </tr>
+      <tr>
+        <td>user
+        </td>
+        <td>track
+        </td>
+      </tr>
+    </table>
+    <form id="adduser" action="" method="post">
+      <input type="text" id="newuser" name="newuser" value="Enter Last.fm username" class="clearfocus" size="40" />
+      <input type="submit" value="Add" class="button">
+    </form>
+    <ul class="friends">
+      <li>
+        <span class="username">Roelven</span>
+        <div class="listening">
+          <span class="listeningnow"></span><a class="song" href="#"></a>
+        </div>
+      </li>
+      <li>
+        <span class="username">Spietsch</span>
+        <div class="listening">
+          <span class="listeningnow"></span><a class="song" href="#"></a>
+        </div>
+      </li>
+      <li>
+        <span class="username">Matisas</span>
+        <div class="listening">
+          <span class="listeningnow"></span><a class="song" href="#"></a>
+        </div>
+      </li>
 
-<div class="wrapper">
-  <form id="adduser" action="" method="post">
-    <input type="text" id="newuser" name="newuser" value="Enter Last.fm username" class="clearfocus" size="40" />
-    <input type="submit" value="Add" class="button">
-  </form>
-  <ul class="friends">
-    <li>
-      <span class="username">Roelven</span>
-      <div class="listening">
-        <span class="listeningnow"></span><a class="song" href="#"></a>
-      </div>
-    </li>
-    <li>
-      <span class="username">Spietsch</span>
-      <div class="listening">
-        <span class="listeningnow"></span><a class="song" href="#"></a>
-      </div>
-    </li>
-    <li>
-      <span class="username">Matisas</span>
-      <div class="listening">
-        <span class="listeningnow"></span><a class="song" href="#"></a>
-      </div>
-    </li>
+    </ul>
+  </div>
 
-  </ul>
-
-</div>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="js/functions.js"></script>
 
 </body>

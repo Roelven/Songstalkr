@@ -1,0 +1,260 @@
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+
+
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+
+html, body, body div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+
+body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+
+/**
+ * Minimal base styles.
+ */
+
+/* 1) Always force a scrollbar in non-IE 
+   2) Remove iOS text size adjust without disabling user zoom: www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+html { overflow-y: scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  
+/* j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
+
+/* Remove margins for navigation lists */
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+
+small { font-size: 85%; }
+b, strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
+}
+
+/* 1) Make inputs and buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
+   2) WebKit browsers add a 2px margin outside the chrome of form elements. 
+      Firefox adds a 1px margin above and below textareas 
+   3) Set font-size to match <body>'s, and font-family to sans-serif 
+   4) Align to baseline */
+button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
+
+/* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
+   2) Align to text-top */
+textarea { overflow: auto; vertical-align:text-top; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+/* Remove extra padding and inner border in Firefox */
+input::-moz-focus-inner,
+button::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+/**
+ * You might tweak these..
+ */
+
+body, select, input, textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+  color: #444;
+  /* Set your base font here, to apply evenly */
+  /* font-family: Georgia, serif;  */
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection { background: #fe57a1; color:#fff; text-shadow: none; }
+::selection { background:#fe57a1; color:#fff; text-shadow: none; }
+
+
+/**
+ * Primary styles
+ *
+ * Author: 
+ */
+
+body {
+  margin: auto 40px;
+  padding: auto;
+}
+
+.container {
+  border-top: 4px solid #d51007;
+}
+
+h1 {
+  margin: 8px 0 16px 0;
+  width: 220px;
+  height: 62px;
+  background: url('data:image/png;base64,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') 0 0 no-repeat;
+  text-indent: -1000px;
+}
+
+.searchbar td:first-child {
+  border-top: 1px solid #ccc;
+/*  border-bottom: 1px solid #ccc;*/
+}
+
+.searchbar td:last-child {
+  background-color: #d51007;
+}
+
+table td {
+  height: 61px;
+  border-bottom: 1px solid #ccc;
+}
+
+table td:first-child {
+  width: 145px;
+  display: block;
+}
+
+table td:last-child {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations.
+   nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+/**
+ * Placeholder media queries for responsive design. Modify as design requires.
+ * These follow after, and will override, the primary ('mobile first') styles
+ * The closing /mediaquery comment is required by respond.js min/max-width Media Query polyfill
+ */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}/*/mediaquery*/
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}/*/mediaquery*/
+
